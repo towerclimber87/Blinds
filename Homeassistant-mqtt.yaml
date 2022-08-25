@@ -1,0 +1,51 @@
+  - name: "Livingroom Blinds 1"
+    availability_topic: "tele/livingroomwindow/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    position_topic: "stat/livingroomwindow/RESULT"
+    position_template: |-
+      {% if ('Shutter1' in value_json) and ('Position' in value_json.Shutter1) %}
+        {{ value_json.Shutter1.Position }}
+      {% else %}
+        {% if is_state('cover.west_blinds', 'unknown') %}
+          50
+        {% else %}
+          {{ state_attr('cover.west_blinds','current_position') }}
+        {% endif %}
+      {% endif %}    
+    position_open: 100
+    position_closed: 0
+    set_position_topic: "cmnd/livingroomwindow/ShutterPosition1"
+    command_topic: "cmnd/livingroomwindow/Backlog"
+    payload_open: "ShutterOpen1"
+    payload_close: "ShutterClose1"
+    payload_stop: "ShutterStop1"
+    retain: false
+    optimistic: false
+    qos: 1
+    
+  - name: "Livingroom Blinds 2"
+    availability_topic: "tele/livingroomwindow/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    position_topic: "stat/livingroomwindow/RESULT"
+    position_template: |-
+      {% if ('Shutter2' in value_json) and ('Position' in value_json.Shutter2) %}
+        {{ value_json.Shutter2.Position }}
+      {% else %}
+        {% if is_state('cover.north_blinds', 'unknown') %}
+          50
+        {% else %}
+          {{ state_attr('cover.north_blinds','current_position') }}
+        {% endif %}
+      {% endif %}    
+    position_open: 100
+    position_closed: 0
+    set_position_topic: "cmnd/livingroomwindow/ShutterPosition2"
+    command_topic: "cmnd/livingroomwindow/Backlog"
+    payload_open: "ShutterOpen2"
+    payload_close: "ShutterClose2"
+    payload_stop: "ShutterStop2"
+    retain: false
+    optimistic: false
+    qos: 1    
