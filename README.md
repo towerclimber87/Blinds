@@ -14,8 +14,6 @@ Tasmota Installer
 https://arendst.github.io/Tasmota-firmware/
 
 
-I have added my backup configuration file. you can upload it and change your mqtt and wifi informaiton . 
-
 •	Run commands in the console to run the "Shutter" mode (you must first configure the GPIO!):
 SetOption80 1 // Enable shutters support.
 ShutterMode 4 // Enable "Shutter mode 4".
