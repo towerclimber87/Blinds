@@ -1,3 +1,5 @@
+
+
 # Blinds
 Stepper drivers TMC2209
 https://amzn.to/3oHofrM
@@ -7,6 +9,10 @@ https://amzn.to/3AA7ZLL
 
 Howto control stepper motors (not my work)
 https://github.com/arendst/Tasmota/discussions/11731
+
+Tasmota Installer
+https://arendst.github.io/Tasmota-firmware/
+
 
 I have added my backup configuration file. you can upload it and change your mqtt and wifi informaiton . 
 
@@ -26,3 +32,4 @@ ShutterOpenDuration2 15 // Shutter#2 opening time = 15 seconds (default = 10 sec
 ShutterCloseDuration2 15 // Shutter#2 closing time = 15 seconds (default = 10 seconds).
 Restart 1 // Restart Tasmota.
 
+![image](https://user-images.githubusercontent.com/23288746/234414488-9cb93e11-5ccf-447b-862a-c31d58450ad6.png)
